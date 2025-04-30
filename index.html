@@ -74,6 +74,9 @@
       text-align: right;
       margin-top: 30px;
     }
+    .hidden-frame {
+      display: none;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -116,7 +119,7 @@
     <h2>צור קשר</h2>
     <p>📞 052-808-4168<br>📧 dvicabi@gmail.com</p>
     <a href="https://wa.me/972528084168?text=היי דביר, ראיתי את האתר ורציתי לקבוע שיעור. באיזה שעה ניתן לקבוע?" target="_blank" class="btn">שלחו לי וואטסאפ לקביעת שיעור</a>
-    <form action="https://formspree.io/f/xqaqennn" method="POST">
+    <form action="https://formspree.io/f/xqaqennn" method="POST" target="hidden_iframe" onsubmit="setTimeout(function(){alert('ההודעה נשלחה בהצלחה ✅');}, 100);">
       <label for="name">שם מלא:</label>
       <input type="text" id="name" name="name" required>
 
@@ -128,6 +131,7 @@
 
       <button type="submit" class="btn">שלח</button>
     </form>
+    <iframe name="hidden_iframe" class="hidden-frame"></iframe>
   </section>
 
   <footer>
