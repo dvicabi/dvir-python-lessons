@@ -61,6 +61,25 @@
     .btn:hover {
       background-color: #574fd6;
     }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+    }
+    form {
+      text-align: right;
+      margin-top: 30px;
+    }
+    .success-message {
+      display: none;
+      color: #a4ffde;
+      font-weight: bold;
+      margin-top: 20px;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -102,7 +121,20 @@
   <section class="section contact" id="contact">
     <h2>צור קשר</h2>
     <p>📞 052-808-4168<br>📧 dvicabi@gmail.com</p>
-    <a href="https://wa.me/972528084168?text=%D7%94%D7%99%D7%99%20%D7%93%D7%91%D7%99%D7%A8%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%A8%D7%A6%D7%99%D7%A0%D7%99%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%20%D7%91%D7%A0%D7%95%D7%A9%D7%90%20%D7%91%D7%95%D7%AA%D7%90%D7%9D" target="_blank" class="btn">שלחו לי וואטסאפ לקביעת שיעור</a>
+    <a href="https://wa.me/972528084168?text=היי דביר, ראיתי את האתר ורציתי לקבוע שיעור. באיזה שעה ניתן לקבוע?" target="_blank" class="btn">שלחו לי וואטסאפ לקביעת שיעור</a>
+    <form action="https://formspree.io/f/xqaqennn" method="POST" onsubmit="document.getElementById('success-message').style.display='block';">
+      <label for="name">שם מלא:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">אימייל:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">נושא הפנייה:</label>
+      <textarea id="subject" name="subject" rows="4" required></textarea>
+
+      <button type="submit" class="btn">שלח</button>
+      <p id="success-message" class="success-message">ההודעה נשלחה בהצלחה ✅</p>
+    </form>
   </section>
 
   <footer>
